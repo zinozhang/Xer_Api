@@ -1,0 +1,249 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+body,
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.icon {
+  width: 300px;
+  margin-top: 30px;
+}
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #202123;
+  margin: 16px 0 40px;
+}
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #86bc25;
+
+  margin:2px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 12px 16px;
+}
+input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid #10a37f;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+input[type="file"] {
+  padding: 12px 16px;
+  border: 1px solid #10a37f;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+input[type="submit"] {
+  padding: 12px 0;
+  color: #fff;
+  background-color: #10a37f;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+.result {
+  font-weight: bold;
+  margin-top: 5px;
+  text-indent: 30px;
+  white-space: pre-wrap; /* Change this property to 'pre-wrap' */
+  word-break: break-word; /* Keep word-break property */
+  overflow-wrap: break-word; /* Keep overflow-wrap property */
+  max-width: 100%; /* Add max-width property */
+
+}
+.c_box {
+ position:relative;
+ height:500px;
+ width:1000px;
+ background-color: #EEE;
+ margin-bottom: 20px;
+ overflow:auto;
+ padding:20px;
+
+}
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#upload_success{
+  text-align: center;
+  font-size: 20px;
+}
+.cancel-button {
+  border: none;
+  color: #12a37f61;
+  text-align: center;
+  text-decoration: none;
+  font-size: 8px;
+  cursor: pointer;
+}
+.chat-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+
+.return-button-container {
+  display: inline-block;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+
+.return-button {
+  background-color: #12a37f;
+  border: none;
+  color: white;
+  padding: 1px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* Add this CSS code to your existing CSS */
+
+.sidepanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  overflow: auto;
+  transform: translateX(100%); /* Add this property */
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.toggle-sidepanel-btn {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  background-color: #10a37f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  width: 30px;
+  height: 40px;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 1001; /* Update z-index value to be higher than the side panel's z-index */
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #10a37f;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add this line */
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-nav li {
+  margin: 0 20px;
+}
+
+.main-nav li a {
+  color: #10a37f;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent;
+}
+
+.main-nav li a:hover {
+  border-bottom: 3px solid #10a37f;
+}
+
+.main-nav li a.active {
+  border-bottom: 3px solid #10a37f;
+}
