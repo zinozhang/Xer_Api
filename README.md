@@ -1,3 +1,3 @@
-# Xer_NewsLabel V2.2
+# 可运行极简版本
 
 funtional
