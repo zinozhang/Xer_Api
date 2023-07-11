@@ -2,7 +2,7 @@ import openai
 
 from helper_folder.数据库表格 import NewsData, TestOnly
 
-key3 = "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"
+key3 = 
 openai.api_key = key3
 
 def test_thread(num,db):
